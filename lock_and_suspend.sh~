@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PROG='xlock '
+ARG="-cpasswd ${EY} -mode blank"
+CMD2=" -startCmd "
+ARG2="dbus-send --print-reply --system --dest=org.freedesktop.UPower /org/freedesktop/UPower org.freedesktop.UPower.Suspend"
+
+${PROG} ${CMD2} "${ARG2}"
+
+xprintidle
+
+
